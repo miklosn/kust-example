@@ -1,0 +1,12 @@
+resources:
+  - ../common
+commonLabels:
+  environment: dev
+patchesStrategicMerge:
+- |-
+  apiVersion: autoscaling/v2beta1
+  kind: HorizontalPodAutoscaler
+  metadata:
+    name: hpa
+  spec:
+    maxReplicas: 1

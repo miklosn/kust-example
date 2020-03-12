@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app
+spec:
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 0
+      maxSurge: 2
+  selector:
+    matchLabels:
+      service_name: app
+  template:
+    metadata:
+      labels:
+        service_name: app
+    spec:
+      containers:
+      - name: app
+        image: app
+        ports:
+        - containerPort: 8080
