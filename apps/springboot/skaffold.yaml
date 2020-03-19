@@ -4,7 +4,7 @@ metadata:
   name: kust-example
 build:
   artifacts:
-  - image: app
+  - image: asia.gcr.io/example/springboot
 deploy:
   kustomize:
     paths: ["./k8s/env/dev"]

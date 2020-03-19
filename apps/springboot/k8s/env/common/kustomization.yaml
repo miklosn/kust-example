@@ -1,0 +1,14 @@
+namespace: default
+resources:
+- github.com/miklosn/kust-example/base/dpl-autoscale-ingress
+images:
+- name: app
+  newName: asia.gcr.io/example/springboot
+namePrefix: service2-
+commonLabels:
+  service_name: service2
+  service_type: java
+  service_group: group2
+  team: team2
+patchesStrategicMerge:
+- patch_healthcheck.yaml

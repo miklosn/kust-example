@@ -1,6 +1,6 @@
 namespace: default
 resources:
-- github.com/miklosn/kust-example/base
+- github.com/miklosn/kust-example/base/dpl-autoscale-ingress
 namePrefix: service1-
 commonLabels:
   service_name: service1
