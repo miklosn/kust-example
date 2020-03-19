@@ -1,6 +1,6 @@
 namespace: default
 resources:
-- ../../base
+- github.com/miklosn/kust-example/base
 namePrefix: service1-
 commonLabels:
   service_name: service1

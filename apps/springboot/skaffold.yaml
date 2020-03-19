@@ -1,0 +1,15 @@
+apiVersion: skaffold/v2alpha4
+kind: Config
+metadata:
+  name: kust-example
+build:
+  artifacts:
+  - image: app
+deploy:
+  kustomize:
+    paths: ["./k8s/env/dev"]
+profiles:
+- name: prod
+  deploy:
+    kustomize:
+      paths: ["./k8s/env/prod"]
