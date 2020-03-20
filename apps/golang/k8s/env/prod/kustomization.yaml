@@ -2,3 +2,7 @@ resources:
   - ../common
 commonLabels:
   environment: prod
+configMapGenerator:
+  - name: service1-config
+    envs: 
+      - env

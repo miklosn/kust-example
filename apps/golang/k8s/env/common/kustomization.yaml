@@ -7,3 +7,5 @@ commonLabels:
   service_type: go
   service_group: group1
   team: team2
+patchesStrategicMerge:
+- patch_env.yaml
