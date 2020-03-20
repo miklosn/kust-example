@@ -9,3 +9,10 @@ commonLabels:
   team: team2
 patchesStrategicMerge:
 - patch_env.yaml
+patches:
+- target:
+    kind: Ingress
+  patch: |-
+    - op: replace
+      path: /spec/rules/0/http/paths/0/path
+      value: /service1

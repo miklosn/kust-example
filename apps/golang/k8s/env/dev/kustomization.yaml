@@ -6,3 +6,10 @@ configMapGenerator:
   - name: service1-config
     envs: 
       - env
+patches:
+- target:
+    kind: Ingress
+  patch: |-
+    - op: replace
+      path: /spec/rules/0/path
+      value: /service1
