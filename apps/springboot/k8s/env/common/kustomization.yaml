@@ -12,3 +12,11 @@ commonLabels:
   team: team2
 patchesStrategicMerge:
 - patch_healthcheck.yaml
+patches:
+- target:
+    kind: Ingress
+  patch: |-
+    - op: replace
+      path: /spec/rules/0/http/paths/0/path
+      value: /service2
+
